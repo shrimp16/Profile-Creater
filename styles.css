@@ -59,3 +59,18 @@ body {
 .user-data > * {
     text-align: center;
 }
+
+button {
+    background-color: gray;
+    font-size: 1.5rem;
+    width: 20%;
+    margin: auto;
+    border: 2px black solid;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(211, 211, 211, 0.8);
+    cursor: pointer;
+}
