@@ -74,3 +74,8 @@ button:hover {
     background-color: rgba(211, 211, 211, 0.8);
     cursor: pointer;
 }
+
+input[type='file']{
+    color: transparent;
+    display: none;
+}
