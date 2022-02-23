@@ -3,8 +3,10 @@ let aboutMe = document.getElementById("aboutme");
 let button = document.getElementById("editProfile");
 let save = document.getElementById("save");
 
-let userPicChange = document.getElementById("user-pic");
-let userBannerChange = document.getElementById("banner-pic");
+let userPicChange = document.getElementById("input-user-text");
+let userBannerChange = document.getElementById("input-banner-text");
+let userPicInput = document.getElementById("user-pic");
+let bannerPicInput = document.getElementById("banner-pic");
 
 $('#editProfile').click(() => {
 
@@ -39,7 +41,7 @@ $('#save').click(() => {
 
 let uploaded_image;
 
-userBannerChange.addEventListener('change', function() {
+bannerPicInput.addEventListener('change', function() {
   const reader = new FileReader();
   reader.addEventListener('load', () => {
     uploaded_image = reader.result;
@@ -48,7 +50,7 @@ userBannerChange.addEventListener('change', function() {
   reader.readAsDataURL(this.files[0]);
 });
 
-userPicChange.addEventListener('change', function() {
+userPicInput.addEventListener('change', function() {
     const reader = new FileReader();
     reader.addEventListener('load', () => {
       uploaded_image = reader.result;
@@ -56,3 +58,11 @@ userPicChange.addEventListener('change', function() {
     });
     reader.readAsDataURL(this.files[0]);
   });
+
+  $("#input-user-text").click(function () {
+    $("#user-pic").trigger('click');
+});
+
+  $('#input-banner-text').click(() => {
+    $('#banner-pic').trigger('click');
+  })
