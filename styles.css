@@ -7,11 +7,24 @@ body {
     background-color: lightgray;
 }
 
+.user-frame {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    padding-bottom: 2rem;
+    width: 55%;
+    margin: auto;
+    margin-top: 3rem;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
 .banner{
     position: relative;
     height: 30vh;
     width: 40vw;
     border: 2px black solid;
+    border-radius: 10px;
     margin: auto;
     margin-top: 2rem;
 }
@@ -30,10 +43,19 @@ body {
 .user-banner{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 
 .user-picture{
     height: 100%;
     width: 100%;
     border-radius: 50%;
+}
+
+.user-data {
+    margin-top: 20vh;
+}
+
+.user-data > * {
+    text-align: center;
 }
